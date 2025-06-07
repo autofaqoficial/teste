@@ -27,15 +27,9 @@
         <a href="#" class="link-nome pulsante hide-mobile" title="Em construção">Área do Passageiro</a>
         <a href="#">FAQ</a>
 
-        <div class="hamburger-menu">
+        <div class="hamburger-menu" onclick="openOverlay()">
           ☰
-          <div class="submenu">
-            <a href="#">Área do Passageiro</a>
-            <a href="#"> 1</a>
-            <a href="#"> 2</a>
-            <a href="#"> 3</a>
-            <a href="#"> 4</a>
-          </div>
+          
         </div>
     </nav>
   </header>
@@ -90,6 +84,30 @@
   </footer>
 
   <script src="script.js"></script>
+
+<!-- Menu Lateral Mobile -->
+<div class="mobile-overlay" id="mobileOverlay">
+  <div class="mobile-menu">
+    <div class="overlay-header">
+      <div class="logo">
+        <div class="logo-top">
+          <span class="logo-s">S</span><span class="logo-ou">ou</span>
+        </div>
+        <div class="logo-bottom">taxi.com</div>
+      </div>
+      <button class="close-btn" onclick="closeOverlay()">✕</button>
+    </div>
+    <nav class="overlay-nav">
+      <a href="#">Área do Passageiro</a>
+      <a href="#">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">4</a>
+    </nav>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 
 </html>
