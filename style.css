@@ -55,7 +55,7 @@ body {
 .carousel img {
   width: 100%;
   height: auto;
-  max-height: 400px;
+  max-height: 800px;
   object-fit: cover;
 }
 
@@ -361,7 +361,7 @@ body {
   }
 
   .titulo-clubes {
-  text-align: center;
+    text-align: center;
     font-size: 20px;
     margin-bottom: 16px;
   }
@@ -411,10 +411,12 @@ body {
     transform: scale(1);
     opacity: 1;
   }
+
   50% {
     transform: scale(1.05);
     opacity: 0.85;
   }
+
   100% {
     transform: scale(1);
     opacity: 1;
@@ -451,8 +453,10 @@ body {
   background-image: url("./imagens/cristo.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100% 100%; /* cobre todo o pseudo-elemento */
-  width: 50%;  /* reduz o pseudo-elemento à largura da imagem */
+  background-size: 100% 100%;
+  /* cobre todo o pseudo-elemento */
+  width: 50%;
+  /* reduz o pseudo-elemento à largura da imagem */
   height: 100%;
   opacity: 0.2;
   pointer-events: none;
@@ -461,7 +465,7 @@ body {
 
 
 /* Garantir que o conteúdo do header fique acima da imagem */
-.top-bar > * {
+.top-bar>* {
   position: relative;
   z-index: 1;
 }
@@ -472,16 +476,22 @@ body {
   position: absolute;
   top: 0;
   height: 100%;
-  width: 20px;           /* largura alterada para 20px */
-  background: blue;      /* cor de referência */
+  width: 20px;
+  /* largura alterada para 20px */
+  background: blue;
+  /* cor de referência */
   pointer-events: none;
   z-index: 2;
 }
+
 .cover-block.left {
-  left: 10px;            /* movido 10px para dentro */
+  left: 10px;
+  /* movido 10px para dentro */
 }
+
 .cover-block.right {
-  right: 10px;           /* movido 10px para dentro */
+  right: 10px;
+  /* movido 10px para dentro */
 }
 
 
