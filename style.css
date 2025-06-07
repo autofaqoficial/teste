@@ -505,30 +505,3 @@ body {
     z-index: -1;
   }
 }
-
-
-@media (max-width: 768px) {
-  #area-passageiro {
-    display: none !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .carousel img {
-    max-height: 800px !important;
-  }
-}
-@media (max-width: 768px) {
-  .nav-links {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 60px; /* define uma altura mínima maior */
-  }
-
-  #area-passageiro {
-    align-self: flex-end;
-    padding-bottom: 4px;
-    display: block !important; /* garantir que apareça */
-  }
-}
