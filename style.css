@@ -404,3 +404,104 @@ body {
 .link-nome:hover {
   text-decoration: underline;
 }
+
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.85;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.pulsante {
+  animation: pulse 1.8s ease-in-out infinite;
+}
+
+
+/* Pseudo-elemento para exibir cristo.png no centro do header */
+.top-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 14px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e8ca09;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  /* relativo para conter o pseudo-elemento */
+}
+
+
+.top-bar::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("./imagens/cristo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%; /* cobre todo o pseudo-elemento */
+  width: 50%;  /* reduz o pseudo-elemento à largura da imagem */
+  height: 100%;
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: -1;
+}
+
+
+/* Garantir que o conteúdo do header fique acima da imagem */
+.top-bar > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+
+.cover-block {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 20px;           /* largura alterada para 20px */
+  background: blue;      /* cor de referência */
+  pointer-events: none;
+  z-index: 2;
+}
+.cover-block.left {
+  left: 10px;            /* movido 10px para dentro */
+}
+.cover-block.right {
+  right: 10px;           /* movido 10px para dentro */
+}
+
+
+
+/* Garantir que o Cristo apareça no mobile */
+@media (max-width: 768px) {
+  .top-bar::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("./imagens/cristo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50% 100%;
+    width: 50%;
+    height: 100%;
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: -1;
+  }
+}
