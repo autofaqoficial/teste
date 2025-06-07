@@ -1,57 +1,93 @@
-
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Teste Visibilidade FAQ e Menu</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SouTaxi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.cdnfonts.com/css/cooper-black" rel="stylesheet">
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-    }
-
-    #menuHamburguer img {
-      width: 40px;
-      cursor: pointer;
-    }
-
-    #botaoFAQ {
-      background-color: #28a745;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      margin-top: 20px;
-      cursor: pointer;
-    }
-
-    /* Esconde no desktop */
     @media (min-width: 768px) {
-      #menuHamburguer,
-      #botaoFAQ {
-        display: none;
+      .nav-links a[href="#"], /* FAQ */
+      .hamburger-menu {
+        display: none !important;
       }
     }
-
-    /* Garante visibilidade no mobile */
     @media (max-width: 767px) {
-      #menuHamburguer,
-      #botaoFAQ {
-        display: block;
+      .nav-links a[href="#"],
+      .hamburger-menu {
+        display: inline-block !important;
       }
     }
   </style>
+
 </head>
+
 <body>
-  <h1>Teste de Visibilidade</h1>
 
-  <div id="menuHamburguer">
-    <img src="https://img.icons8.com/ios-filled/50/menu--v1.png" alt="Menu">
-  </div>
+  <!-- Cabeçalho fixo -->
+  <header class="top-bar">
+    <div class="logo">
+      <div class="logo-top">
+      <span class="logo-s">S</span><span class="logo-ou">ou</span>
+    </div>
+      <div class="logo-bottom">taxi.com</div>
+    </div>
+    <nav class="nav-links">
+      <div class="menu-wrapper">
+        <a href="#">FAQ</a>
 
-  <button id="botaoFAQ">FAQ</button>
+        <div class="hamburger-menu">
+          ☰
+          <div class="submenu">
+            <a href="#"> 1</a>
+            <a href="#"> 2</a>
+            <a href="#"> 3</a>
+            <a href="#"> 4</a>
+          </div>
+        </div>
+    </nav>
+  </header>
 
-  <p>Esse teste esconde o FAQ e o menu hamburguer no desktop e mostra no mobile.</p>
+  <!-- Banner principal -->
+  <section class="main-banner">
+    <div class="carousel">
+      <img id="bannerImage" src="./imagens/banner1.jpg" alt="Banner" />
+      <div class="controls-inside">
+        <button onclick="prevImage()">⟨</button>
+        <button onclick="togglePlay()" id="playPauseBtn">⏸</button>
+        <button onclick="nextImage()">⟩</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Produtos -->
+  <section class="mid-section">
+    <div class="card">
+      <img src="./imagens/produto1.jpg" alt="Produto 1" />
+      <h3>Produto 1</h3>
+      <p>Descrição breve do produto 1.</p>
+    </div>
+    <div class="card">
+      <img src="./imagens/produto2.jpg" alt="Produto 2" />
+      <h3>Produto 2</h3>
+      <p>Descrição breve do produto 2.</p>
+    </div>
+    <div class="card">
+      <img src="./imagens/produto3.jpg" alt="Produto 3" />
+      <h3>Produto 3</h3>
+      <p>Descrição breve do produto 3.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 - SouTaxi</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
