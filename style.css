@@ -283,3 +283,61 @@ body {
   margin-left: 1px;
   font-family: 'Poppins', sans-serif;
 }
+
+.grupo-bloco {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.grupo-card {
+  background: linear-gradient(to bottom, #ffffff, #f1f1f1);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 8px 24px;
+  min-width: 240px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #007bff;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 2px solid transparent;
+  margin: 0 auto;
+}
+
+.grupo-card:hover {
+  transform: translateY(-5px);
+  background: linear-gradient(to bottom, #e6f0ff, #d6e8ff);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  border-color: #007bff;
+}
+
+.titulo-clubes {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #222;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.grupo-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+
+.grupo-card.destaque {
+  background-color: #ffeccf;
+  color: #e67300;
+  border: 2px dashed #e67300;
+}
+
+.grupo-card.destaque:hover {
+  background-color: #fff3e0;
+  box-shadow: 0 6px 16px rgba(255, 165, 0, 0.3);
+}
