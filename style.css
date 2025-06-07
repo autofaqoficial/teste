@@ -349,3 +349,28 @@ body.dimmed::before {
 body.dimmed {
   overflow: hidden;
 }
+
+
+/* Aumentar altura do banner no mobile */
+@media (max-width: 768px) {
+  .carousel img {
+    max-height: 800px; /* dobra tamanho vertical */
+  }
+}
+
+
+/* Dobrar tamanho do logo "Sou/taxi.com" no mobile */
+@media (max-width: 768px) {
+  .logo-top {
+    font-size: 2.8em !important;
+  }
+  .logo-s {
+    font-size: 2.4em !important;
+  }
+  .logo-ou {
+    font-size: 2.8em !important;
+  }
+  .logo-bottom {
+    font-size: 1.8em !important;
+  }
+}
