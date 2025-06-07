@@ -18,24 +18,18 @@
   <header class="top-bar">
     <div class="logo">
       <div class="logo-top">
-      <span class="logo-s">S</span><span class="logo-ou">ou</span>
-    </div>
+        <span class="logo-s">S</span><span class="logo-ou">ou</span>
+      </div>
       <div class="logo-bottom">taxi.com</div>
     </div>
     <nav class="nav-links">
       <div class="menu-wrapper">
-        <a href="#" class="link-nome pulsante" title="Em construção">Área do Passageiro</a>
+        <a href="#" class="link-nome hide-mobile" title="Em construção">Área do Passageiro</a>
         <a href="#">FAQ</a>
-
-        <div class="hamburger-menu">
-          ☰
-          <div class="submenu">
-            <a href="#"> 1</a>
-            <a href="#"> 2</a>
-            <a href="#"> 3</a>
-            <a href="#"> 4</a>
-          </div>
-        </div>
+        <div class="hamburger-menu" onclick="openOverlay()">☰</div>
+      </div>
+      <!-- Link que aparece somente no mobile, abaixo de FAQ e hambúrguer -->
+      <a href="#" class="link-nome show-mobile" title="Em construção">Área do Passageiro</a>
     </nav>
   </header>
 
@@ -51,19 +45,18 @@
     </div>
   </section>
 
-<section class="grupo-bloco">
-  <h2 class="titulo-clubes">Clubes de Taxistas</h2>
-  <div class="grupo-grid">
-    <div class="grupo-card" onclick="window.open('https://chat.whatsapp.com/SEULINK-KICKS')">
-      <img src="./imagens/logo-nissan.png" alt="Ícone Kicks" style="width: 48px; height: 48px; vertical-align: middle; margin-right: 10px;">
-      Clube Nissan Kicks Táxi
+  <section class="grupo-bloco">
+    <h2 class="titulo-clubes">Clubes de Taxistas</h2>
+    <div class="grupo-grid">
+      <div class="grupo-card" onclick="window.open('https://chat.whatsapp.com/SEULINK-KICKS')">
+        <img src="./imagens/logo-nissan.png" alt="Ícone Kicks" style="width: 48px; height: 48px; vertical-align: middle; margin-right: 10px;">
+        Clube Nissan Kicks Táxi
+      </div>
+      <div class="grupo-card destaque" onclick="alert('Em breve você poderá cadastrar seu grupo!')">
+        📢 Divulgue aqui seu grupo
+      </div>
     </div>
-    <div class="grupo-card destaque" onclick="alert('Em breve você poderá cadastrar seu grupo!')">
-      📢 Divulgue aqui seu grupo
-    </div>
-  </div>
-</section>
-
+  </section>
 
   <!-- Produtos -->
   <section class="mid-section">
@@ -89,6 +82,29 @@
   </footer>
 
   <script src="script.js"></script>
+
+  <!-- Menu Lateral Mobile -->
+  <div class="mobile-overlay" id="mobileOverlay">
+    <div class="mobile-menu">
+      <div class="overlay-header">
+        <div class="logo">
+          <div class="logo-top">
+            <span class="logo-s">S</span><span class="logo-ou">ou</span>
+          </div>
+          <div class="logo-bottom">taxi.com</div>
+        </div>
+        <button class="close-btn" onclick="closeOverlay()">✕</button>
+      </div>
+      <nav class="overlay-nav">
+        <a href="#">Área do Passageiro</a>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+      </nav>
+    </div>
+  </div>
+
 </body>
 
 </html>
