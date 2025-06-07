@@ -448,7 +448,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-image: url("./imagens/cristo.png");
+  background-image: url("./imagens/cristo_editado.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%; /* cobre todo o pseudo-elemento */
@@ -484,3 +484,18 @@ body {
   right: 10px;           /* movido 10px para dentro */
 }
 
+
+@media (max-width: 768px) {
+  .hide-mobile {
+    display: none !important;
+  }
+
+  .top-bar::after {
+    background-size: contain !important;
+    width: 100% !important;
+    height: 100% !important;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
