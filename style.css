@@ -1,4 +1,3 @@
-
 /* ================= Estilos Gerais ================= */
 *,
 *::before,
@@ -88,7 +87,8 @@ body {
   color: #000;
   font-size: 1em;
   font-weight: 500;
-  white-space: nowrap; /* impede quebra interna do texto */
+  white-space: nowrap;
+  /* impede quebra interna do texto */
 }
 
 .link-nome {
@@ -252,6 +252,7 @@ body {
 
 /* ================= Ajustes apenas para mobile ================= */
 @media (max-width: 768px) {
+
   /* Esconde a versão original ao lado de FAQ/hambúrguer */
   .hide-mobile {
     display: none !important;
@@ -261,8 +262,10 @@ body {
   .show-mobile {
     display: block !important;
     width: 100%;
-    margin-top: 8px;       /* distância para destacar que é nova linha */
-    white-space: nowrap;   /* impede quebra de texto */
+    margin-top: 18px;
+    /* distância para destacar que é nova linha */
+    white-space: nowrap;
+    /* impede quebra de texto */
   }
 
   /* Garante que FAQ + hambúrguer fiquem em linha única */
@@ -332,7 +335,7 @@ body.dimmed::before {
 }
 
 .overlay-nav {
-  margin-top: 30px;  
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -354,7 +357,8 @@ body.dimmed {
 /* Aumentar altura do banner no mobile */
 @media (max-width: 768px) {
   .carousel img {
-    max-height: 800px; /* dobra tamanho vertical */
+    max-height: 800px;
+    /* dobra tamanho vertical */
   }
 }
 
@@ -364,12 +368,15 @@ body.dimmed {
   .logo-top {
     font-size: 2.8em !important;
   }
+
   .logo-s {
     font-size: 2.4em !important;
   }
+
   .logo-ou {
     font-size: 2.8em !important;
   }
+
   .logo-bottom {
     font-size: 1.8em !important;
   }
