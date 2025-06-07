@@ -518,3 +518,9 @@ body {
     max-height: 800px !important;
   }
 }
+@media (max-width: 768px) {
+  #area-passageiro {
+    align-self: flex-end;
+    padding-bottom: 4px;
+  }
+}
