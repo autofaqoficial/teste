@@ -29,3 +29,14 @@ function togglePlay() {
   }
   isPlaying = !isPlaying;
 }
+
+
+function openOverlay() {
+  document.getElementById("mobileOverlay").style.display = "flex";
+  document.body.classList.add("dimmed");
+}
+
+function closeOverlay() {
+  document.getElementById("mobileOverlay").style.display = "none";
+  document.body.classList.remove("dimmed");
+}
