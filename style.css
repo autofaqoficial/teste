@@ -1,4 +1,5 @@
 
+/* ================= Estilos Gerais ================= */
 *,
 *::before,
 *::after {
@@ -33,9 +34,40 @@ body {
 }
 
 .top-bar .logo {
-  font-size: 1.6em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1;
+}
+
+.logo-top {
+  font-size: 1.4em;
+  font-weight: 600;
+  color: #000;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -1px;
+}
+
+.logo-s {
+  font-family: 'Cooper Black', serif;
+  font-size: 1.2em;
   font-weight: bold;
   color: #000;
+}
+
+.logo-ou {
+  font-family: 'Cooper Black', serif;
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #000;
+}
+
+.logo-bottom {
+  font-size: 0.9em;
+  font-weight: 500;
+  color: #000;
+  margin-top: -4px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .nav-links {
@@ -56,39 +88,20 @@ body {
   color: #000;
   font-size: 1em;
   font-weight: 500;
-  white-space: nowrap; /* impede quebra de linha */
+  white-space: nowrap; /* impede quebra interna do texto */
 }
 
 .link-nome {
   font-family: 'Poppins', sans-serif;
 }
 
-.hide-mobile {
-  display: inline;
-}
-
-.show-mobile {
-  display: none;
-}
-
-/* Estilo do hambúrguer e FAQ */
+/* Ajuste da fonte do hambúrguer */
 .hamburger-menu {
   cursor: pointer;
   font-size: 1.2em;
 }
 
-@media (max-width: 768px) {
-  /* Esconder o link principal no topo */
-  .hide-mobile {
-    display: none !important;
-  }
-  /* Exibir o link abaixo */
-  .show-mobile {
-    display: inline;
-    margin-right: 20px;
-  }
-}
-
+/* Banner */
 .main-banner {
   position: relative;
   text-align: center;
@@ -127,70 +140,26 @@ body {
   background-color: rgba(255, 255, 255, 0.6);
 }
 
-.mid-section {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  padding: 40px 20px;
-  background: #fff;
-}
-
-.card {
-  width: 280px;
-  background: #f3f3f3;
-  padding: 20px;
-  margin: 10px;
-  text-align: center;
-  border-radius: 6px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-}
-
-.card img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-}
-
-.footer {
-  background: #eee;
-  padding: 20px;
-  text-align: center;
-  font-size: 0.9em;
-}
-
-.logo-top {
-  font-size: 1.4em;
-  font-weight: 600;
-  color: #000;
-  font-family: 'Poppins', sans-serif;
-}
-
-.logo-s {
-  font-family: 'Cooper Black', serif;
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #000;
-}
-
-.logo-ou {
-  font-family: 'Cooper Black', serif;
-  font-size: 1.4em;
-  font-weight: bold;
-  color: #000;
-}
-
-.logo-bottom {
-  font-size: 0.9em;
-  font-weight: 500;
-  color: #000;
-  margin-top: -4px;
-  font-family: 'Poppins', sans-serif;
-}
-
+/* Grupo de blocos */
 .grupo-bloco {
   text-align: center;
   padding: 40px 20px;
   background-color: #f9f9f9;
+}
+
+.titulo-clubes {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #222;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.grupo-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .grupo-card {
@@ -219,21 +188,6 @@ body {
   border-color: #007bff;
 }
 
-.titulo-clubes {
-  text-align: center;
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: #222;
-  font-family: 'Orbitron', sans-serif;
-}
-
-.grupo-grid {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
 .grupo-card.destaque {
   background-color: #ffeccf;
   color: #e67300;
@@ -245,7 +199,91 @@ body {
   box-shadow: 0 6px 16px rgba(255, 165, 0, 0.3);
 }
 
-/* Estilo do overlay mobile (mantido conforme antes) */
+/* Seção de produtos */
+.mid-section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+  background: #fff;
+}
+
+.card {
+  width: 280px;
+  background: #f3f3f3;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* Rodapé */
+.footer {
+  background: #eee;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+/* Pseudo-elemento Cristo para desktop */
+.top-bar::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("./imagens/cristo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50% 100%;
+  width: 50%;
+  height: 100%;
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ================= Ajustes apenas para mobile ================= */
+@media (max-width: 768px) {
+  /* Esconde a versão original ao lado de FAQ/hambúrguer */
+  .hide-mobile {
+    display: none !important;
+  }
+
+  /* Exibe a versão abaixo (nova linha) */
+  .show-mobile {
+    display: block !important;
+    width: 100%;
+    margin-top: 8px;       /* distância para destacar que é nova linha */
+    white-space: nowrap;   /* impede quebra de texto */
+  }
+
+  /* Garante que FAQ + hambúrguer fiquem em linha única */
+  .menu-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* Ajusta o pseudo-elemento do Cristo para manter 50% da largura */
+  .top-bar::after {
+    background-size: contain !important;
+    width: 50% !important;
+    height: 100% !important;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Overlay de fundo quando o menu estiver ativo */
 body.dimmed::before {
   content: "";
   position: fixed;
@@ -257,6 +295,7 @@ body.dimmed::before {
   z-index: 1500;
 }
 
+/* Menu lateral mobile */
 .mobile-overlay {
   position: fixed;
   top: 0;
@@ -293,7 +332,7 @@ body.dimmed::before {
 }
 
 .overlay-nav {
-  margin-top: 30px;
+  margin-top: 30px;  
   display: flex;
   flex-direction: column;
   gap: 20px;
