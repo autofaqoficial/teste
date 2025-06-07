@@ -29,17 +29,3 @@ function togglePlay() {
   }
   isPlaying = !isPlaying;
 }
-
-function openOverlay() {
-  const overlay = document.getElementById("mobileOverlay");
-  overlay.classList.add("show");
-  overlay.style.display = "flex";
-  document.body.classList.add("dimmed");
-}
-
-function closeOverlay() {
-  const overlay = document.getElementById("mobileOverlay");
-  overlay.classList.remove("show");
-  overlay.style.display = "none";
-  document.body.classList.remove("dimmed");
-}
